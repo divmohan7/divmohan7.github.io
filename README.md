@@ -1,1 +1,2 @@
 # divmohan7.github.io
+# I coded an "about" page in addition to the index, products, and individual product page. This required additional HTML and CSS coding of the page itself, as well as adding links between other pages.

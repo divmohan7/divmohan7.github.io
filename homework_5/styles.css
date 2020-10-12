@@ -235,6 +235,8 @@ a:hover {
 }
 .small-circle {
   background-color: black;
+  width: 5px;
+  height: 5px;
   color: white;
   border-radius: 50%;
   text-align: center;
