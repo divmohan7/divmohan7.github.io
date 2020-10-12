@@ -152,8 +152,8 @@ h2 {
 }
 .product-circle {
   background-color: purple;
-  height: 450px;
-  width: 450px;
+  height: 480px;
+  width: 480px;
   border-radius: 50%;
   margin-top: 80px;
   overflow: hidden;
@@ -162,7 +162,7 @@ h2 {
 .images {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
-  grid-gap: 130px;
+  gap: 120px;
 }
 #circle {
   background-color: green;
@@ -210,6 +210,7 @@ button {
 h5 {
   background-color: black;
   color: white;
+  font-size: 24px;
   padding: 5px;
   border-radius: 5%;
 }
@@ -224,7 +225,18 @@ a:hover {
 }
 .about-info {
   margin-top: -400px;
+  margin-left: 550px;
 }
 .products p {
   color: #E55F5F;
+}
+.small-circle {
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+}
+.small-circle:hover {
+  background-color: lightpink;
+  color: black;
 }
