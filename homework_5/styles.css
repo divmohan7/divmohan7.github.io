@@ -210,6 +210,8 @@ button {
 h5 {
   background-color: black;
   color: white;
+  padding: 5px;
+  border-radius: 5%;
 }
 .page > p {
   color: #E55F5F;
