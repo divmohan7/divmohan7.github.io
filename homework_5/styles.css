@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Sail&display=swap&family=Comfortaa&family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap&family=Comfortaa&family=Josefin+Sans&display=swap');
 
 html {
   font-family: 'Comfortaa', cursive;
@@ -48,9 +48,9 @@ ul {
 
 h1 {
   position: absolute;
-  font-size: 2.4em;
+  font-size: 2.8em;
   /* color: white; */
-  font-family: 'Sail', cursive;
+  font-family: 'Sacramento', cursive;
 }
 h2, h3 {
   font-family: 'Josefin Sans', sans-serif;
@@ -205,6 +205,13 @@ button {
   color: black;
   margin-left: 20px;
 }
-#shop-active {
+#shop-active, #about-active {
   color: lightpink;
+}
+h5 {
+  background-color: black;
+  color: white;
+}
+.page > p {
+  color: #E55F5F;
 }
