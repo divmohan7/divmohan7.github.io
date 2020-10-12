@@ -205,3 +205,6 @@ button {
   color: black;
   margin-left: 20px;
 }
+#shop-active {
+  color: lightpink;
+}
