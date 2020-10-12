@@ -218,3 +218,6 @@ h5 {
 a:hover {
   color: lightpink;
 }
+.active {
+  color: lightpink;
+}
