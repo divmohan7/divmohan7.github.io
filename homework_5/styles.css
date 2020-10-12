@@ -215,3 +215,6 @@ h5 {
 .page > p {
   color: #E55F5F;
 }
+a:hover {
+  color: lightpink;
+}
