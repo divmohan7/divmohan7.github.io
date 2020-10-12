@@ -42,7 +42,7 @@ ul {
   text-transform: uppercase;
 }
 
-#shop {
+#shop, #shop-active {
   text-align: right;
 }
 
