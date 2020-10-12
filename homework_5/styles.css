@@ -212,7 +212,7 @@ h5 {
   color: white;
   font-size: 24px;
   padding: 5px;
-  border-radius: 5%;
+  border-radius: 15px;
 }
 .page > p {
   color: #E55F5F;
@@ -227,8 +227,11 @@ a:hover {
   margin-top: -400px;
   margin-left: 550px;
 }
-.products p {
+.products a {
   color: #E55F5F;
+}
+.products a:hover {
+  color: #80b8ae;
 }
 .small-circle {
   background-color: black;
