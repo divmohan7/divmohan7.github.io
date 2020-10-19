@@ -195,12 +195,13 @@ button {
   background-color: #E55F5F;
 }
 .arrow {
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 7.5px 10px 7.5px 0;
-  border-color: transparent #e55f5f transparent transparent;
-  margin-left: 100px;
+  width: 0px;
+  height: 0px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #E55F5F;
+  margin-top: 18px;
+  position: absolute;
 }
 .back {
   color: black;
