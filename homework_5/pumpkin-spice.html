@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang= "en">
 <head>
   <meta charset="utf-8">
   <title> Bun Bun Bake Shop</title>
@@ -19,21 +19,29 @@
       <span class="arrow"> </span>
       <a href="/homework_5/products.html" class="back">Choose a different flavor</a>
     </h4>
-    <div class="product-circle"><img src="images/cinnamon-buns-11.jpeg"></div>
+    <div class="product-circle"><img src="images/cinnamon-buns-11.jpeg" alt="pumpkin spice cinnamon bun"></div>
     <div class="images">
-      <div id="circle"><img src="images/cinnamon-buns-10.jpeg"></div>
-      <div id="circle"><img src="images/cinnamon-buns-9.jpeg"></div>
-      <div id="circle"><img src="images/cinnamon-buns-12.jpeg"></div>
+      <div id="circle"><img src="images/cinnamon-buns-10.jpeg" alt="pumpkin spice cinnamon bun"></div>
+      <div id="circle"><img src="images/cinnamon-buns-9.jpeg" alt="pumpkin spice cinnamon bun"></div>
+      <div id="circle"><img src="images/cinnamon-buns-12.jpeg" alt="pumpkin spice cinnamon bun"></div>
     </div>
     <div class="product-info">
       <h2>Pumpkin Spice</h2>
-      <p>Step into fall with our delicious pumpkin spice cinnamon bun!</p>
+      <p>Step into fall with our delicious pumpkin spice cinnamon bun! Buns come in single packs, packs of 3, 6 or 12 without a glaze or in your choice of one of our three delicious glazes - Sugar-Milk, Vanilla-Milk, Double Chocolate.</p>
       <h5><strong>Step 1:</strong> Choose your amount</h5>
       <p><span class="small-circle">-</span> 1 <span class ="small-circle">+</span></p>
-      <h5><strong>Step 2:</strong>Choose a glaze</h5>
-      <p>Vanilla-Milk</p>
+      <h5><strong>Step 2:</strong> Choose a glaze</h5>
+      <form>
+        <input list="glazes" name="glaze">
+        <datalist id="glazes">
+          <option value="None">
+          <option value="Vanilla-Milk">
+          <option value="Sugar-Milk">
+          <option value="Double Chocolate">
+        </datalist>
       <p><strong>Total Cost: </strong> $3.50</p>
-      <button>Add to Cart</button>
+      <button> Add to Cart</button>
+      </form>
     </div>
   </div>
 </body>

@@ -30,7 +30,7 @@ a {
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr 140px;
-  grid-gap: 50px;
+  grid-gap: 120px;
   position: absolute;
   width: 100%;
   text-decoration: none;
@@ -162,7 +162,8 @@ h2 {
 .images {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
-  gap: 120px;
+  grid-gap: 150px;
+  margin-top: -50px;
 }
 #circle {
   background-color: green;
@@ -199,6 +200,7 @@ button {
   border-style: solid;
   border-width: 7.5px 10px 7.5px 0;
   border-color: transparent #e55f5f transparent transparent;
+  margin-left: 100px;
 }
 .back {
   color: black;
@@ -210,7 +212,7 @@ button {
 h5 {
   background-color: black;
   color: white;
-  font-size: 24px;
+  font-size: 16px;
   padding: 5px;
   border-radius: 15px;
   box-sizing: border-box;
@@ -237,8 +239,11 @@ a:hover {
 .small-circle {
   background-color: black;
   box-sizing: border-box;
-  height: 15px;
-  width: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
+  padding-top: 2px;
   color: white;
   border-radius: 50%;
   text-align: center;
