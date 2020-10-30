@@ -8,8 +8,12 @@ var addItem = "";
 //Changes price when quantity is selected 
 function priceCounter(){
 	var price = document.getElementById("price-details");
-	price.innerText =  document.getElementById("quantity").value;
+	price.innerHTML =  document.getElementById("quantity").value;
 }
+function setImage(select){
+	var image = document.getElementsByName("image-swap")[0];
+	image.src = select.options[select.selectedIndex].value;
+  }  
 
 function items(title, quantity, glaze, price, img){
 	this.title = title;

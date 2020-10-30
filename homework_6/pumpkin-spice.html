@@ -22,7 +22,7 @@
     <h4>
       <a href="/homework_6/products.html" class="back">Choose a different flavor</a>
     </h4>
-    <div class="product-circle"><img src="images/cinnamon-buns-11.jpeg" alt="pumpkin spice cinnamon bun"></div>
+    <div class="product-circle" id="glazeImage"><img src="images/cinnamon-buns-11.jpeg" name="image-swap" alt="pumpkin spice cinnamon bun"></div>
     <div class="images">
       <div class="img-circle"><img src="images/cinnamon-buns-10.jpeg" alt="pumpkin spice cinnamon bun"></div>
       <div class="img-circle"><img src="images/cinnamon-buns-9.jpeg" alt="pumpkin spice cinnamon bun"></div>
@@ -34,7 +34,7 @@
       <form>
         <h5><strong>Step 1:</strong> Choose your quantity</h5>
         <div>
-        <select id = "quantity" onchange= "priceCounter()" class="selectordropdowns">
+        <select id = "quantity" onchange= "priceCounter()">
           <option>-</option>
           <option id="count1" value="2.50">1</option>
           <option id="count3" value="7.50">3</option>
@@ -46,11 +46,11 @@
           <h5><strong>Step 2:</strong> Choose a glaze</h5>
         </div>
         <div>
-        <select id="glaze" class="selectordropdowns">
-          <option value="None">None</option>
-          <option value="Vanilla-Milk">Vanilla-Milk</option>
-          <option value="Sugar-Milk">Sugar-Milk</option>
-          <option value="Double Chocolate">Double Chocolate</option>
+        <select id="glaze" onchange="setImage(this)">
+          <option value="images/cinnamon-buns-10.jpeg">None</option>
+          <option value="images/cinnamon-buns-9.jpeg">Vanilla-Milk</option>
+          <option value="images/cinnamon-buns-13.jpg">Sugar-Milk</option>
+          <option value="images/cinnamon-buns-11.jpeg">Double Chocolate</option>
         </select>
         </div>
       <p class="cost">Total Cost: $<span id ="price-details"></span></p>
