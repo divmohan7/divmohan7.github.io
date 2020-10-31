@@ -11,9 +11,9 @@ function priceCounter(){
 	price.innerHTML =  document.getElementById("quantity").value;
 }
 function setImage(select){
-	var image = document.getElementsByName("image-swap")[0];
-	image.src = select.options[select.selectedIndex].value;
-  }  
+  var image = document.getElementsByName("image-swap")[0];
+  image.src = select.options[select.selectedIndex].value;
+}  
 
 function items(title, quantity, glaze, price, img){
 	this.title = title;
