@@ -159,7 +159,6 @@ h2 {
   padding: 50px;
   padding-top: 150px;
   z-index: -200;
-  margin-bottom: px;
 }
 .product-circle {
   background-color: purple;
@@ -356,8 +355,10 @@ body {
   padding: 10px;
   padding-top: 13px;
   box-shadow: 3px 5px #80b8ae;
+  background-color: #E55F5F;
+  text-transform: uppercase;
 }
-#addtocart:hover {
+.addtocart:hover {
   color: lightpink;
   box-shadow: none;
   transition: .5s;
