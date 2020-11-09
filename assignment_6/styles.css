@@ -307,11 +307,13 @@ select {
   grid-gap: 60px;
 }
 .cart-img {
+  display: block;
   width: 180px;
   height: 180px;
   overflow: hidden;
   box-shadow: 10px 10px #80b8ae;
 }
+
 .cart-img:nth-child(odd) {
   box-shadow: 10px 10px lightpink;
 }

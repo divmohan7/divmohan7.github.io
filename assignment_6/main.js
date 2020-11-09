@@ -1,9 +1,39 @@
-//Global Variables
-var quantity = "";
-var glazes = "";
-var img = "";
-var addItem = "";
+//creates array to hold bag items
+var productArr = []
+var productArr2 = []
 
+class Product {
+	
+	
+	constructor(type, quantity, glaze, price) {
+		this.type = type
+		this.quantity = quantity
+		this.glaze = glaze
+		this.price = price
+	}
+}
+
+function checkoutPageLoaded() {
+	var loadedProductArr = localStorage.getItem('order')
+	var productArr2 = JSON.parse(loadedProductArr)
+	console.log(productArr2)
+
+	var cart = document.getElementById("cart")
+
+	for(var i = 0; i < productArr2.length; i++) {
+		var bun = productArr2[i]
+		var bunGlaze = bun.glaze
+		var bunQuantity = bun.quantity
+		var bunType = document.getElementsByName("type")
+
+		cart.innerHTML += "<div class='cart-img'> <img src="+ bunGlaze +"> </div><h3> Pumpkin Spice</br> Price: $"+ bunQuantity +"</h3><span class='delete' onclick= 'deleteProduct(" + i + ")'> Delete </span>"
+		
+	}
+}
+
+function saveEdits() {
+	localStorage.setItem('order', JSON.stringify(productArr2))
+}
 
 //Changes price when quantity is selected 
 function priceCounter(){
@@ -15,12 +45,22 @@ function setImage(select){
   image.src = select.options[select.selectedIndex].value;
 }  
 
-function items(title, quantity, glaze, price, img){
-	this.title = title;
+function items(type, quantity, glaze, price, img){
+	this.type = type;
 	this.quantity = quantity;
 	this.glaze = glaze;
 	this.price = price;
 	this.img = img;
+}
+function deleteProduct(i) {
+	alert('i : ' + i)
+	console.log('before we delete')
+	console.log(productArr2)
+
+	productArr2.splice(i,1)
+
+	console.log('after we delete')
+	console.log(productArr2)
 }
 
 //Add to Cart Functionality
@@ -30,36 +70,23 @@ function addToCart() {
 	document.getElementById("quantityCount").style.visibility = "visible";
 
 
-	title = document.getElementsByClassName("productTitle");
-	quantity = document.getElementById("quantity").value;
-	glazing = document.getElementById("glazing").value;
+	type = document.getElementsByClassName("type");
 	price = document.getElementById("quantity").value;
-	img = "images/blackberry-bag.png"
-	addItem = new items(title, quantity, glazing, price, img);
+	img = document.getElementById("glaze").value;
+	quantity = document.getElementById("quantity")
+	img = "images/cinnamon-bun-2.jpeg"
+	addItem = new items(type, quantity, glaze, price, img);
 
 	window.localStorage.setItem(localStorageCount, JSON.stringify(addItem));
 	// localStorageCount += 1;
 }
 
-//creates array to hold bag items
-var productArr = []
-var productArr2 = []
-
-class Product {
-	
-	
-	constructor(quantity, glaze) {
-        this.quantity = quantity
-		this.glaze = glaze
-	}
-}
-
-
 function addToCart() {
-    var quantity = document.getElementById('quantity').value
+	var type = document.getElementById('type')
+	var quantity = document.getElementById('quantity').value
     var glaze = document.getElementById('glaze').value
 
-    var bun = new Product(quantity, glaze)
+    var bun = new Product(type, quantity, glaze, price)
     productArr.push(bun)
 	
 	updateCartNumber(productArr.length)
@@ -71,36 +98,6 @@ function goToCheckoutPage() {
 
 	window.location.replace("cart.html")
 }
-function checkoutPageLoaded() {
-	var loadedProductArr = localStorage.getItem('order')
-	var productArr2 = JSON.parse(loadedProductArr)
-	console.log(productArr2)
-
-	var cart = document.getElementById("cart")
-
-	for(var i = 0; i < productArr2.length; i++) {
-		var cinbun = productArr2[i]
-		var cinbunGlaze = cinbun.glaze
-		var cinbunQuantity = cinbun.quantity
-
-		cart.innerHTML += "<div class='cart-img'> <img src="+ cinbunGlaze +"> </div>"
-		cart.innerHTML += "<h3><b>Pumpkin Spice</b> </br> <b>Glaze: </b></br> <b>Price:</b> $"+ cinbunQuantity +"</h3>"
-		cart.innerHTML += "<span class='delete' onclick= 'deleteProduct(" + i + ")'> Delete </span>"
-		
-	}
-}
-function saveEdits() {
-	localStorage.setItem('order', JSON.stringify(productArr2))
-}
-
-function deleteProduct(i) {
-	alert('i : ' + i)
-	
-	localStorage.removeItem(productArr2[i-1])
-	console.log(productArr2)
-
-}
-
 
 function updateCartNumber(num) {
 	var cartCount = document.getElementById('quantityCount')
