@@ -65,10 +65,6 @@ function addToCart() {
 	updateCartNumber(productArr.length)
 }
 
-function updateCartNumber(num) {
-	var cartCount = document.getElementById('quantityCount')
-	cartCount.innerHTML = num
-}
 function goToCheckoutPage() {
 	alert("taking you to your cart")
 	localStorage.setItem('order', JSON.stringify(productArr))
@@ -87,24 +83,26 @@ function checkoutPageLoaded() {
 		var cinbunGlaze = cinbun.glaze
 		var cinbunQuantity = cinbun.quantity
 
-		cart.innerHTML += "<div class='cart-items'> Flavor: Pumpkin Spice Glaze: <img src="+ cinbunGlaze +"> Price: "+ cinbunQuantity +"</div>"
-		cart.innerHTML += "<span onclick= 'deleteProduct(' + i + ')'> Delete </span>"
+		cart.innerHTML += "<div class='cart-img'> <img src="+ cinbunGlaze +"> </div>"
+		cart.innerHTML += "<h3><b>Pumpkin Spice</b> </br> <b>Glaze: </b></br> <b>Price:</b> $"+ cinbunQuantity +"</h3>"
+		cart.innerHTML += "<span class='delete' onclick= 'deleteProduct(" + i + ")'> Delete </span>"
 		
 	}
 }
+function saveEdits() {
+	localStorage.setItem('order', JSON.stringify(productArr2))
+}
+
 function deleteProduct(i) {
-	alert("i : " + i)
+	alert('i : ' + i)
 	
 	productArr2.splice(i,1)
-	
-	cart.innerHTML = ''
+	console.log(productArr2)
 
-	for(var i = 0; i < productArr2.length; i++) {
-		var cinbun = productArr2[i]
-		var cinbunGlaze = cinbun.glaze
-		var cinbunQuantity = cinbun.quantity
-	
-		cart.innerHTML += "<div class='cart-items'> Flavor: Pumpkin Spice Glaze: <img src="+ cinbunGlaze +"> Price: "+ cinbunQuantity +"</div>"
-		cart.innerHTML += "<span onclick= 'deleteProduct(' + i + ')'> Delete </span>"
-	}
+}
+
+
+function updateCartNumber(num) {
+	var cartCount = document.getElementById('quantityCount')
+	cartCount.innerHTML = num
 }

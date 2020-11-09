@@ -303,17 +303,21 @@ select {
   padding: 40px;
   display: grid;
   border-radius: 40px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 200px 1fr 1fr;
   grid-gap: 60px;
 }
 .cart-img {
   width: 180px;
   height: 180px;
+  overflow: hidden;
+  box-shadow: 10px 10px #80b8ae;
+}
+.cart-img:nth-child(odd) {
+  box-shadow: 10px 10px lightpink;
 }
 .cart-items {
   align-self: center;
-  justify-self: left;
+  justify-self: middle;
 }
 h6 {
   display: inline-block;
@@ -360,7 +364,7 @@ body {
   font-size: 18px;
   font-weight: bolder;
 }
-.addtocart:hover {
+.addtocart:hover, .cart-img:hover {
   color: lightpink;
   box-shadow: none;
   transition: .5s;
@@ -371,5 +375,15 @@ body {
   height: 100%;
 }
 :hover {
+  transition: .5s;
+}
+.delete {
+  padding: 40px;
+  font-size: 20px;
+  text-shadow: 1px 1px #E55F5F;
+}
+.delete:hover {
+  text-shadow: none;
+  color: #E55F5F;
   transition: .5s;
 }
