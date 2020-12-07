@@ -1,0 +1,89 @@
+/* Removes gloabl default decorations for commonly used html tags */
+body {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+  }
+  
+  h1, h2 {
+    margin: 0;
+  }
+  
+  h2 {
+    letter-spacing: 1px;
+  }
+  
+  img {
+    object-fit: contain;
+  }
+  
+  .page {
+    height: 100vh;
+  }
+  
+  .downArrow {
+    text-align: center;
+    position:absolute;
+    cursor: pointer;
+    width:94px;
+    left:50%;
+    bottom:10px;
+    transform:translateX(-50%);
+  }
+  
+  @keyframes move-up-down {
+    50% {
+      bottom: 5px;
+    }
+  }
+  
+  .homeArrow, .subpageArrow {
+    height: 18px;
+    bottom: 0;
+    position:relative;
+    margin-bottom: 10px;
+    animation: move-up-down 1s linear infinite;
+  }
+  
+  #home {
+    background-color: #FFFCF0;
+  }
+  
+  #mcdonalds {
+    background-color: #C6373A;
+  }
+  
+  #kfc {
+    background-color: #154181;
+  }
+  
+  #burgerKing {
+    background-color: #FAAF18;
+  }
+  
+  #pizzaHut {
+    background-color: #B1151A;
+  }
+  
+  #tacoBell {
+    background-color: #C41A7F;
+  }
+  
+  #wendys {
+    background-color: #1F95CA;
+  }
+  
+  #pandaExpress {
+    background-color: #CE123D;
+  }
+  

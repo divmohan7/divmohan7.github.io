@@ -57,8 +57,7 @@ function deleteProduct(i) {
 	console.log('before we delete')
 	console.log(productArr2)
 
-	productArr2.splice(i,1)
-
+	document.getElementsByName("cart-img").style.display = "none"
 	console.log('after we delete')
 	console.log(productArr2)
 }
