@@ -1,16 +1,20 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <title>Web History</title>
   <meta-charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="styles.css" rel="stylesheet" type="text/css" />
-  <script src="index.js"></script>
+<!--  Styles  -->
+<link rel="stylesheet" type="text/css" href="/styles/fullpage.css" />
+<link rel="stylesheet" type="text/css" href="/styles/styles.css">
+
 </head>
 <body>
-  <div class="sidebar">
+   <div class="sidebar">
     <div class="line">
-      <div class="timeline">
+      <div class="timeline" id="moveTo">
       <div class="circle"></div>
         <h3>Early 90s</h3>
       <div class="circle"></div>
@@ -23,33 +27,42 @@
         <h3 id="topmargin">Today</h3>
       </div>
     </div>
-  </div>
-  <div class="content" id="intro">
-    <h1>Web Design Through the Years</h1>
-    <p>This project is intended to be an interactive and educational tool to express changes and trends in web design over the past two decades.</p>
-<p>Click through the timeline below for a brief description and content rendered as it would be during the time period</p>
-    <div class="resources">
+    </div>
+    <div id="fullpage">
+    <div class="section fp-auto-height-responsive" id="intro">
+      <h1>Web Design Through the Years</h1>
+      <p>This project is intended to be an interactive and educational tool to express changes and trends in web design over the past two decades.</p>
+      <p>Click through the timeline below for a brief description and content rendered as it would be during the time period</p>
+      <div id="actions">
+        <div class="arrows"><a id="moveSectionUp" href="#"></a></div>
+       <div class="arrows"> <a id="moveSectionDown" href="#"></a></div>
       </div>
-  </div>
-  <div class="content" id="early90s">
+      </div>
+  <div class="section fp-auto-height-responsive" id="early90s">
     <h1>Early 90s</h1>
     <p>On Christmas of 1990, Swiss researcher Tim Berners-Lee created the world’s first Web Browser. In 1994, the first web banned in the world was created in 476 x56px. This period of web design was characterised by the most basic uses of HTML, flat markup, and those infamous blue hyperlinks.</p>
   </div>
-  <div class="content" id="late90s">
+  <div class="section fp-auto-height-responsive" id="late90s">
     <h1>Late 90s</h1>
     <p>In 1995, David Bohnett and John Rezner founded the Beverly Hills web hosting company GeoCities, offering users 2MB of free disk space to host their website. This gave people opportunities to express their individuality. Everyone could code. A slew of creativity and the development of Flash led to neon colors, 3D buttons, splash pages, and spacer gifs. In the mid-1990s, less wasn’t more - more was more.This was an era of experimentation almost with the intention of being as illegible and eclectic as possible.</p>
   </div>
-  <div class="content" id="early00s">
+  <div class="section fp-auto-height-responsive" id="early00s">
     <h1>Early 2000s</h1>
     <p>The early 2000s brought increased support for CSS. There was a decrease (though not a full elimination) of the use of garish colors and an increased appreciation for white space. Not to say there wasn’t still an outlet for that late 90s creativity through fonts, 3D gradient buttons, and bright colors to distinguish headings. Links became attached to icons rather than hyperlink text. Usability became more of a focus.</p>
   </div>
-  <div class="content" id="late00s">
+  <div class="section fp-auto-height-responsive" id="late00s">
     <h1>Late 2000s</h1>
     <p>This is what’s known as “the Industrial Revolution of the web” - with the rise of interactive content, multimedia applications, and the rise of the social web. More attention was paid to color distribution, typography, and content over Flash animation. Buying and selling was a major focus of the web at this time and so tags, keyword optimization, and easy to use search functions became important for businesses and profit.</p>
   </div>
-  <div class="content" id="today">
+  <div class="section fp-auto-height-responsive" id="today">
     <h1>Today</h1>
     <p>The modern web is essential and irreplaceable. No more 3D buttons! Minimaism and blended typography as well as generous use of large, high resolution images, and infinite scrolling have taken the center stage. Here we see responsive web design as mobile devices and tablets become a frequent way of navigating the web. The way we think about the web is no longer hi-tech, it’s vital and therefore needs to be accessible, adaptable, and usable.</p>
   </div>
+  </div>
+  <button id="destroy">Show Me</button>
+<!-- Scripts -->
+<script type="text/javascript" src="scripts/fullpage.js"> </script>
+<script type="text/javascript" src="scripts/main.js"> </script>
+
   </body>
 </html>

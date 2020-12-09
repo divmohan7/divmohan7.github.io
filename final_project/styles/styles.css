@@ -1,89 +1,144 @@
-/* Removes gloabl default decorations for commonly used html tags */
+html {
+  box-sizing: border-box;
+  font-family: "Didact Gothic", sans-serif;
+  background: cover;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
 body {
-    margin: 0px;
-    padding: 0px;
-    text-decoration: none;
-  }
+  height: 100%;
+  position: relative;
+}
+
+.line {
+  position: fixed;
+  width: 6px;
+  height: 80%;
+  background-color: black;
+  margin: 40px;
+  border-radius: 5px;
+}
+
+.timeline {
+  display: grid;
+  height: 122%;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  margin-left: -7px; 
+}
+
+.timeline h3 {
+  margin-top: -12px;
+  margin-left: 10px;
+  font-size: 0.8em;
+  line-height: 1.8em;
+}
+
+.sidebar{
+  position: fixed;
+  z-index: 100;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  border: 5px solid black;
   
-  a {
-    text-decoration: none;
+}
+.section {
+  padding: 50px;
+  margin: auto;
+  padding-left: 120px;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.4em;
+}
+
+#intro {
+  font-family: Helvetica, sans-serif;
+}
+
+#early90s {
+  font-family: Times, serif;
+}
+
+#late90s {
+  background-image: url("/images/90s_pattern.png");
+  font-family: Times, serif;
+}
+
+#early00s {
+}
+
+#late00s {
+}
+
+#today {
+  font-family: 'Courier New', monospace;
+}
+
+#actions {
+  text-align: center;
+  position: fixed;
+  z-index: 99999;
+}
+
+#moveSectionUp, #moveSectionDown {
+    position:fixed;
+		height: 70px;
+		display:block;
+		width: 100%;
+		z-index: 9;
+		text-align:center;
+		color: #f2f2f2;
+		padding: 20px 0 0 0;
+	}
+
+	#moveSectionUp{
+    top:0px;
+    background-image: url('/images/up-arrow.png');
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 5px;
+	}
+	#moveSectionDown{
+    bottom:0px;
+    background-image: url('/images/down-arrow.png');
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 10px;
   }
-  
-  ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
+  #fp-nav ul li a span,
+  .fp-slidesNav ul li a span {
+      background: blue;
   }
-  
-  h1, h2 {
-    margin: 0;
+ 
+  #destroy{
+    position:fixed;
+    z-index:999;
+    font-size: 2em;
+    cursor:pointer;
+    top: 20px;
+    left: 20px;
+
+@media screen and (min-width: 600px) {
+  .section {
+    padding-left: 15%;
   }
-  
-  h2 {
-    letter-spacing: 1px;
+  .timeline h3 {
+    font-size: 1.1em;
+    line-height: 1.6em;
   }
-  
-  img {
-    object-fit: contain;
-  }
-  
-  .page {
-    height: 100vh;
-  }
-  
-  .downArrow {
-    text-align: center;
-    position:absolute;
-    cursor: pointer;
-    width:94px;
-    left:50%;
-    bottom:10px;
-    transform:translateX(-50%);
-  }
-  
-  @keyframes move-up-down {
-    50% {
-      bottom: 5px;
-    }
-  }
-  
-  .homeArrow, .subpageArrow {
-    height: 18px;
-    bottom: 0;
-    position:relative;
-    margin-bottom: 10px;
-    animation: move-up-down 1s linear infinite;
-  }
-  
-  #home {
-    background-color: #FFFCF0;
-  }
-  
-  #mcdonalds {
-    background-color: #C6373A;
-  }
-  
-  #kfc {
-    background-color: #154181;
-  }
-  
-  #burgerKing {
-    background-color: #FAAF18;
-  }
-  
-  #pizzaHut {
-    background-color: #B1151A;
-  }
-  
-  #tacoBell {
-    background-color: #C41A7F;
-  }
-  
-  #wendys {
-    background-color: #1F95CA;
-  }
-  
-  #pandaExpress {
-    background-color: #CE123D;
-  }
-  
+}
