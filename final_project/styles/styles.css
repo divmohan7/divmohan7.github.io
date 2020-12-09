@@ -124,14 +124,31 @@ p {
   .fp-slidesNav ul li a span {
       background: blue;
   }
- 
   #destroy{
-    position:fixed;
-    z-index:999;
-    font-size: 2em;
-    cursor:pointer;
-    top: 20px;
-    left: 20px;
+  position:fixed;
+  z-index:999;
+  font-size: 2em;
+  cursor:pointer;
+  top: 20px;
+  left: 20px;
+  }
+
+  #destroy {
+    box-sizing: border-box;
+    margin-left: 300px;
+    text-align: center;
+    background-color: #000000;
+    color: lightgrey;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    box-shadow: 5px 5px rgb(68, 182, 182, 0.7);
+  }
+
+  button:hover {
+    box-shadow: none;
+  }
 
 @media screen and (min-width: 600px) {
   .section {
@@ -140,5 +157,9 @@ p {
   .timeline h3 {
     font-size: 1.1em;
     line-height: 1.6em;
+  }
+  img {
+    float: right;
+    max-width: 50%;
   }
 }
