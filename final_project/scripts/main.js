@@ -7,7 +7,7 @@ new fullpage('#fullpage', {
 	autoScrolling:true,
     scrollHorizontally: true,
     verticalCentered: true,
-    sectionsColor: ['transparent', 'beige', 'lavender', 'lightgreen', 'transparent'],
+    sectionsColor: ['transparent', 'teal', 'lavender', 'lightgreen', 'transparent'],
     dragAndMove: true,
     fixedElements: ['#moveSectionDown','#moveSectionUp'],
     paddingTop: '50px',
