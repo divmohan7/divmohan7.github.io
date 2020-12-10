@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Fontdiner+Swanky&family=Inconsolata:wght@300&family=Lora&family=Oxanium:wght@600&family=Prosto+One&family=Rajdhani&family=Ranchers&family=Titillium+Web:wght@300&display=swap');
+
 html {
   box-sizing: border-box;
-  font-family: "Didact Gothic", sans-serif;
+  font-family: 'inconsolata', sans-serif;
   background: cover;
 }
 
@@ -43,6 +45,7 @@ body {
 .sidebar{
   position: fixed;
   z-index: 100;
+  color: white;
 }
 
 .circle {
@@ -65,26 +68,39 @@ p {
 }
 
 #intro {
-  font-family: Helvetica, sans-serif;
+  background: linear-gradient(to right,#3204fdba, #9907facc),url('/images/computer-room.jpg');
+  background-size: cover;
+  color: white;
+}
+#intro h1 {
+  font-family: 'Oxanium', cursive;
 }
 
+#resources {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
 #early90s {
   font-family: Times, serif;
 }
 
 #late90s {
   background-image: url("/images/90s_pattern.png");
-  font-family: Times, serif;
+  font-family: 'Lora', serif;
 }
 
 #early00s {
+}
+
+#early00s h1 {
+  font-family: 'Fontdiner Swanky', cursive;
 }
 
 #late00s {
 }
 
 #today {
-  font-family: 'Courier New', monospace;
+
 }
 
 #actions {
@@ -115,7 +131,7 @@ p {
 	#moveSectionDown{
     bottom:0px;
     background-image: url('/images/down-arrow.png');
-    background-size: 40px;
+    background-size: 30px;
     background-repeat: no-repeat;
     background-position: center;
     padding: 10px;
@@ -135,19 +151,23 @@ p {
 
   #destroy {
     box-sizing: border-box;
-    margin-left: 300px;
+    margin-left: 20%;
     text-align: center;
     background-color: #000000;
     color: lightgrey;
-    border-radius: 5px;
     border: none;
-    font-size: 14px;
+    font-size: 20px;
+    padding: 15px;
     text-transform: uppercase;
-    box-shadow: 5px 5px rgb(68, 182, 182, 0.7);
+    box-shadow: 5px 5px rgba(255, 255, 255, 0.7);
   }
 
-  button:hover {
+  #destroy:hover {
     box-shadow: none;
+    background-color: white;
+    color:rgba(100, 16, 235, 0.7);
+    border: 2px solid rgb(100, 16, 235, 0.7);
+    transition: .5s;
   }
 
 @media screen and (min-width: 600px) {
@@ -161,5 +181,8 @@ p {
   img {
     float: right;
     max-width: 50%;
+  }
+  #destroy {
+    margin-left: 14%;
   }
 }
