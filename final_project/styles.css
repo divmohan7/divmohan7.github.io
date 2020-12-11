@@ -75,7 +75,7 @@ body {
 }
 
 #intro {
-  background: linear-gradient(to right,#3204fdba, #e607facc),url('/images/computer-room.jpg');
+  background: linear-gradient(to right,#3204fdba, #e607facc),url('/computer-room.jpg');
   background-size: cover;
   color: white;
 }
@@ -114,7 +114,7 @@ body {
 }
 
 #late90s {
-  background-image: url("/images/90s_pattern.png");
+  background-image: url("/90s_pattern.png");
   font-family: 'Times', serif;
 }
 
@@ -155,7 +155,7 @@ body {
 }
 
 #late00s {
-  background-image: url("/images/windows-bliss.png");
+  background-image: url("/windows-bliss.png");
   background-size: cover;
   font-family: "Barlow", sans-serif;
 }
@@ -178,11 +178,11 @@ body {
     hsla(0, 0%, 100%, 0.6), hsla(0, 0%, 100%, 0) 50%,
     hsla(0, 0%, 0%, 0.3) 50%, hsla(0, 0%, 100%, 0.2)
   );
-  font-size: 22px;
+  font-size: 20px;
   font-family: sans-serif;
   font-weight: bold;
   color: white;
-  padding: 20px 40px;
+  padding: 10px 20px;
   text-shadow:
     0 0 15px hsla(0, 0%, 100%, 1), /* bloom */
     0 2px 4px hsla(0, 0%, 0%, 0.7); /* drop shadow */
