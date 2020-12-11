@@ -45,6 +45,7 @@ body {
 }
 
 .sidebar{
+  display: none;
   position: fixed;
   z-index: 100;
   color: white;
@@ -61,12 +62,12 @@ body {
 .section {
   padding: 50px;
   margin: auto;
-  padding-left: 120px;
-  padding-right: 100px;
+  padding-left: 50px;
+  padding-right: 15px;
 }
 
 .grid-container {
-  display: grid;
+  display: block;
   grid-template-columns: 1fr 1fr;
   column-gap: 1em;
   align-items: center;
@@ -92,6 +93,7 @@ body {
 
 #early90s {
   font-family: Times, serif;
+  background-color: teal;
 }
 
 #early90s .grid-container {
@@ -107,6 +109,10 @@ body {
   padding: 10px;
 }
 
+.photo1 {
+  max-height: 100%;
+}
+
 #late90s {
   background-image: url("/images/90s_pattern.png");
   font-family: 'Times', serif;
@@ -117,18 +123,84 @@ body {
   color: rgb(0, 255, 191);
   box-shadow: 20px 20px rgb(0, 214, 161);
 }
+
+#late90s h1 {
+  font-family: 'Prosto One', cursive;
+   color: rgb(0, 255, 55)
+}
 #centered-grid {
   text-align: center;
 }
 
 #early00s {
+  font-family: "Rajdhani", sans-serif;
+  background-image: linear-gradient(180deg, #FFFFFF,  rgb(236, 158, 255))
 }
 
 #early00s h1 {
   font-family: 'Fontdiner Swanky', cursive;
+  box-sizing: inline-box;
+  border-radius: 10px;
+  padding: 20px;
+  background-image: linear-gradient(180deg, rgb(0, 247, 255), rgb(236, 158, 255));
+  color: white;
+}
+
+#early00s .shrink-image {
+  border-radius: 50px;
+}
+
+#early00s img {
+  padding: 30px 0px;
 }
 
 #late00s {
+  background-image: url(/images/windows-bliss.png);
+  background-size: cover;
+  font-family: "Barlow", sans-serif;
+}
+
+#late00s h1 {
+  margin-bottom: 100px;
+}
+
+#late00s .caption {
+  margin-bottom: 50px;
+}
+
+.buttons {
+  height: 40px;
+  border: 2px solid #25567a;
+  color: #fff;
+  border-radius: 30px;
+  padding: 10px 40px;
+  margin: 20px;
+  box-shadow: 0 22px 40px rgba(0, 0, 0, 0.95), inset 0 2px 0px rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+  background: #15487f;
+  background: -moz-linear-gradient(left, #15487f 0%, #479fd6 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, #15487f), color-stop(100%, #479fd6));
+  background: -webkit-linear-gradient(left, #15487f 0%, #479fd6 100%);
+}
+
+.buttons:hover {
+  background: #f79a21;
+  background: -moz-linear-gradient(left, #f79a21 0%, #d6bc47 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, #15487f), color-stop(100%, #f3e848));
+  background: -webkit-linear-gradient(left, #f79a21 0%, #d6bc47 100%);
+  border: orange;
+}
+
+#late00s .caption {
+  text-align: left;
+}
+
+#bliss-content {
+  border: 3px solid rgb(0, 64, 201);
+  border-top: 30px solid rgb(0, 64, 201);
+  border-radius: 10px;
+  padding: 20px;
+  background-color: white;
 }
 
 #today {
@@ -170,28 +242,30 @@ body {
   }
   #fp-nav ul li a span,
   .fp-slidesNav ul li a span {
-      background: blue;
+      background: white;
+      border: 2px solid black;
   }
-  #destroy{
-    position:fixed;
-    z-index:999;
-    font-size: 2em;
-    cursor:pointer;
-    top: 20px;
-    left: 20px;
-    box-sizing: border-box;
-    margin-left: 20%;
+  #destroy, #rebuild{
+    font-family:'Titillium Web', monospace;
+    font-size: 0.9em;
+    padding: 5px 10px;
     text-align: center;
     background-color: #000000;
     color: lightgrey;
     border: none;
-    font-size: 20px;
-    padding: 15px;
     text-transform: uppercase;
     box-shadow: 5px 5px rgba(255, 255, 255, 0.7);
   }
 
-  #destroy:hover {
+  #buttons {
+    display: flex;
+    position:fixed;
+    z-index:999;
+    top: 12px;
+    left: 12px;
+  }
+
+  #destroy:hover, #rebuild:hover {
     box-shadow: none;
     background-color: white;
     color:rgba(100, 16, 235, 0.7);
@@ -220,6 +294,7 @@ body {
   }
 
   img {
+    position: relative;
     max-width: 100%;
   }
 
@@ -244,9 +319,16 @@ body {
     line-height: 1em;
   }
 
+  .shrink-image {
+    max-height: 500px;
+    background-size: contain;
+  }
+
 @media screen and (min-width: 600px) {
   .section {
-    padding-left: 15%;
+    padding-left: 160px;
+    height: 100%;
+    padding-right: 120px;
   }
   .timeline h3 {
     font-size: 1.1em;
@@ -258,5 +340,10 @@ body {
   .flex-container {
     flex-wrap: nowrap;
   }
-
+  .grid-container {
+    display: grid;
+  }
+  #buttons {
+    margin-left: 100px;
+  }
 }
