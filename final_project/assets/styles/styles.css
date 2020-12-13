@@ -286,7 +286,7 @@ body {
 
 	#moveSectionUp{
     top:0px;
-    background-image: url('/assets/images/up-arrow.png');
+    background-image: url('../images/up-arrow.png');
     background-size: 30px;
     background-repeat: no-repeat;
     background-position: center;
