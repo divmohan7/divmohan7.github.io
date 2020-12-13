@@ -136,7 +136,7 @@ body {
   font-family: 'Prosto One', cursive;
    color: rgb(0, 255, 55)
 }
-#centered-grid {
+#centered-grid, #centre-grid, #center-grid {
   text-align: center;
 }
 
@@ -163,7 +163,7 @@ body {
 }
 
 #late00s {
-  background-image: url("assets/images/windows-bliss.png");
+  background-image: url("/assets/images/windows-bliss.png");
   background-size: cover;
   font-family: "Barlow", sans-serif;
 }
@@ -251,7 +251,7 @@ body {
 }
 
 #today {
-  background-image: linear-gradient(to right,#0485fd98, #0740fa), url('assets/images/responsive-web.jpg');
+  background-image: linear-gradient(to right,#0485fd98, #0740fa), url('./assets/images/responsive-web.jpg');
   background-size: cover;
   color: white;
   font-family: "Open Sans", sans-serif;
