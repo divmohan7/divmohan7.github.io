@@ -83,7 +83,7 @@ body {
 }
 
 #intro {
-  background: linear-gradient(to right,#3204fdba, #e607facc),url('/assets/images/computer-room.jpg');
+  background: linear-gradient(to right,#3204fdba, #e607facc),url('assets/images/computer-room.jpg');
   background-size: cover;
   color: white;
 }
@@ -122,7 +122,7 @@ body {
 }
 
 #late90s {
-  background-image: url("/assets/images/90s_pattern.png");
+  background-image: url("assets/images/90s_pattern.png");
   font-family: 'Times', serif;
 }
 
@@ -163,7 +163,7 @@ body {
 }
 
 #late00s {
-  background-image: url("/assets/images/windows-bliss.png");
+  background-image: url("assets/images/windows-bliss.png");
   background-size: cover;
   font-family: "Barlow", sans-serif;
 }
@@ -251,7 +251,7 @@ body {
 }
 
 #today {
-  background-image: linear-gradient(to right,#0485fd98, #0740fa), url('/assets/images/responsive-web.jpg');
+  background-image: linear-gradient(to right,#0485fd98, #0740fa), url('assets/images/responsive-web.jpg');
   background-size: cover;
   color: white;
   font-family: "Open Sans", sans-serif;
@@ -287,7 +287,7 @@ body {
 
 	#moveSectionUp{
     top:0px;
-    background-image: url('/assets/images/up-arrow.png');
+    background-image: url('assets/images/up-arrow.png');
     background-size: 30px;
     background-repeat: no-repeat;
     background-position: center;
@@ -295,7 +295,7 @@ body {
 	}
 	#moveSectionDown{
     bottom:0px;
-    background-image: url('/assets/images/down-arrow.png');
+    background-image: url('assets/images/down-arrow.png');
     background-size: 30px;
     background-repeat: no-repeat;
     background-position: center;
@@ -334,7 +334,7 @@ body {
     border: 2px solid rgb(100, 16, 235, 0.7);
     transition: .5s;
   }
-  button {
+  .home-buttons {
     margin-right: 10px;
     margin-bottom: 5px;
     padding: 5px;
@@ -350,7 +350,7 @@ body {
     font-size: 16px;
   }
 
-  button:hover {
+  .home-buttons:hover {
     background-color: rgb(116, 116, 255);
     color: white;
   }
