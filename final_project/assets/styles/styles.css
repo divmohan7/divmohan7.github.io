@@ -51,6 +51,14 @@ body {
   color: white;
 }
 
+#fp-nav ul li .fp-tooltip {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 14px;
+  background-color: rgba(26, 26, 26, 0.4);
+  border-radius: 5px;
+  padding: 5px;
+}
+
 .circle {
   width: 20px;
   height: 20px;
@@ -75,7 +83,7 @@ body {
 }
 
 #intro {
-  background: linear-gradient(to right,#3204fdba, #e607facc),url('./images/computer-room.jpg');
+  background: linear-gradient(to right,#3204fdba, #e607facc),url('/assets/images/computer-room.jpg');
   background-size: cover;
   color: white;
 }
@@ -114,7 +122,7 @@ body {
 }
 
 #late90s {
-  background-image: url("./images/90s_pattern.png");
+  background-image: url("/assets/images/90s_pattern.png");
   font-family: 'Times', serif;
 }
 
@@ -155,19 +163,25 @@ body {
 }
 
 #late00s {
-  background-image: url("./images/windows-bliss.png");
+  background-image: url("/assets/images/windows-bliss.png");
   background-size: cover;
   font-family: "Barlow", sans-serif;
 }
 
 #late00s h1 {
   margin-bottom: 100px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 3px 3px rgba(0, 0, 0, 0.521);
+  margin-left: 20px;
 }
 
 #late00s .caption {
   margin-bottom: 30px;
   margin-left: 20px;
   text-align: left;
+  color: white;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 .buttons {
@@ -175,17 +189,16 @@ body {
   position: relative;
   background-color: #AAA;
   background-image: linear-gradient( /* chrome */
-    hsla(0, 0%, 100%, 0.6), hsla(0, 0%, 100%, 0) 50%,
+    hsla(0, 0%, 100%, 0.4), hsla(0, 0%, 100%, 0) 50%,
     hsla(0, 0%, 0%, 0.3) 50%, hsla(0, 0%, 100%, 0.2)
   );
   font-size: 20px;
-  font-family: sans-serif;
-  font-weight: bold;
+  font-family: "Prosto One", cursive;
   color: white;
   padding: 10px 20px;
   text-shadow:
     0 0 15px hsla(0, 0%, 100%, 1), /* bloom */
-    0 2px 4px hsla(0, 0%, 0%, 0.7); /* drop shadow */
+    0 2px 4px hsla(0, 58%, 59%, 0.678); /* drop shadow */
   border: none;
   border-radius: 50px;
   margin: 10px;
@@ -197,7 +210,7 @@ body {
     5px 18px 10px hsla(0, 0%, 0%, 0.2); /* drop shadow 2 */
   cursor: pointer;
   transition: transform 0.1s, box-shadow 0.1s;
-  background-color: orange;
+  background-color: rgb(255, 72, 0);
 }
 .buttons:hover {
   background-color: purple;
@@ -214,24 +227,45 @@ body {
   height: 30px;
   border-radius: 15px;
   background: linear-gradient(
-    hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0) );
-}
+    hsla(0, 0%, 100%, 0.4), hsla(0, 0%, 100%, 0) );
 }
 
 #late00s .caption {
   text-align: left;
+  font-size: 16px;
+}
+
+.windows-xp {
+  border-radius: 5px;
+  margin-top: 0;
 }
 
 #bliss-content {
-  border: 3px solid rgb(0, 64, 201);
-  border-top: 30px solid rgb(0, 64, 201);
+  border: 3px solid #2D59A4;
+  border-top: none;
+  margin-top: -20px;
   border-radius: 10px;
   padding: 20px;
+  padding-top: 40px;
   background-color: white;
 }
 
 #today {
-
+  background-image: linear-gradient(to right,#0485fd98, #0740fa), url('/assets/images/responsive-web.jpg');
+  background-size: cover;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  line-height: 28px;
+}
+#today h1 {
+  box-sizing: content-box;
+  text-transform: uppercase;
+  background-color: white;
+  border-radius: 20px;
+  color: #0485fd98;
+  padding: 20px;
+  box-shadow: 6px 4px #0740fa;
+  width: fit-content;
 }
 
 #actions {
@@ -253,7 +287,7 @@ body {
 
 	#moveSectionUp{
     top:0px;
-    background-image: url('/images/up-arrow.png');
+    background-image: url('/assets/images/up-arrow.png');
     background-size: 30px;
     background-repeat: no-repeat;
     background-position: center;
@@ -261,7 +295,7 @@ body {
 	}
 	#moveSectionDown{
     bottom:0px;
-    background-image: url('/images/down-arrow.png');
+    background-image: url('/assets/images/down-arrow.png');
     background-size: 30px;
     background-repeat: no-repeat;
     background-position: center;
@@ -272,6 +306,7 @@ body {
       background: white;
       border: 2px solid black;
   }
+
   #destroy, #rebuild{
     font-family:'Titillium Web', monospace;
     font-size: 0.9em;
