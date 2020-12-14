@@ -1,5 +1,7 @@
+/* importing Google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Barlow&family=Fontdiner+Swanky&family=Inconsolata:wght@300&family=Lora&family=Oxanium:wght@600&family=Prosto+One&family=Rajdhani&family=Ranchers&family=Titillium+Web:wght@300&display=swap');
 
+/* setting up the page */
 html {
   box-sizing: border-box;
   font-family: 'Inconsolata', sans-serif;
@@ -19,12 +21,19 @@ body {
   line-height: 1.4em;
 }
 
+/* editing timeline navigation */
 #fp-nav ul li .fp-tooltip {
   font-family: "Titillium Web", sans-serif;
   font-size: 14px;
   background-color: rgba(26, 26, 26, 0.4);
   border-radius: 5px;
   padding: 5px;
+}
+
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+    background: white;
+    border: 2px solid black;
 }
 
 .circle {
@@ -35,6 +44,7 @@ body {
   border: 5px solid black;
   
 }
+/* styles for sections (in chronological order) */
 .section {
   padding: 50px;
   margin: auto;
@@ -152,6 +162,7 @@ body {
   text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
 }
 
+/* lots of CSS to implement glossy styled buttons */
 .buttons {
   display: inline-block;
   position: relative;
@@ -242,6 +253,8 @@ body {
   border-radius: 10px;
 }
 
+/* navigation arrows */
+
 #actions {
   text-align: center;
   position: fixed;
@@ -275,12 +288,8 @@ body {
     background-position: center;
     padding: 10px;
   }
-  #fp-nav ul li a span,
-  .fp-slidesNav ul li a span {
-      background: white;
-      border: 2px solid black;
-  }
 
+  /* styles for button activating normal scroll*/
   #destroy {
     font-family:'Titillium Web', monospace;
     font-size: 0.9em;
@@ -301,13 +310,15 @@ body {
     left: 12px;
   }
 
-  #destroy:hover, #rebuild:hover {
+  #destroy:hover {
     box-shadow: none;
     background-color: white;
     color:rgba(100, 16, 235, 0.7);
     border: 2px solid rgb(100, 16, 235, 0.7);
     transition: .5s;
   }
+
+  /* menu buttons from home page*/
   .home-buttons {
     margin-right: 10px;
     margin-bottom: 5px;
@@ -341,11 +352,13 @@ body {
     letter-spacing: 2em;
   }
 
+  /* mimic blue hyperlinks */
   .hyperlinks {
     font-family: "Times", serif;
     color: blue;
     text-decoration: underline;
   }
+
   .caption {
     text-align: center;
     font-family: "Barlow", sans-serif;
@@ -359,6 +372,7 @@ body {
     background-size: contain;
   }
 
+  /* responsive design - built mobile first*/
 @media screen and (min-width: 600px) {
   .section {
     padding-left: 160px;
