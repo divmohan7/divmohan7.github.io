@@ -1,3 +1,5 @@
+//fullpage js settings to create timeline/anchors
+
 new fullpage('#fullpage', {
     licenseKey: 'null',
     menu: '#timeline',
@@ -16,6 +18,9 @@ new fullpage('#fullpage', {
     navigationTooltips: ['Home', 'The Early 1990s', 'The Late 1990s', 'The Early 2000s', 'The Late 2000s', 'The Web Today'],
     showActiveTooltip: true,
 });
+
+//up and down arrows
+
 document.querySelector('#moveSectionUp').addEventListener('click', function(e){
     e.preventDefault();
     fullpage_api.moveSectionUp();
@@ -24,6 +29,8 @@ document.querySelector('#moveSectionDown').addEventListener('click', function(e)
 		e.preventDefault();
 		fullpage_api.moveSectionDown();
     });
+
+//destroy all CSS and JS to leave basic scroll
 $(document).on('click', '#destroy', function(){
         //default is 700. 
         fullpage_api.destroy('all');
